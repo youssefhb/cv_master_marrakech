@@ -84,12 +84,7 @@ int main( int argc, const char** argv )
             if(!capture.open( inputName ))
                 cout << "Could not read " << inputName << endl;
         }
-    }
-    else
-    {
-        image = imread( "../data/lena.jpg", 1 );
-        if(image.empty()) cout << "Couldn't read ../data/lena.jpg" << endl;
-    }
+    }    
 
     if( capture.isOpened() )
     {
@@ -206,7 +201,7 @@ void detectAndDraw( Mat& img, CascadeClassifier& cascade,
         Mat smallImgROI;
         vector<Rect> nestedObjects;
         Point center;
-        Scalar color = colors[i%8];
+        Scalar color = colors[4];
         int radius;
 
         double aspect_ratio = (double)r.width/r.height;
